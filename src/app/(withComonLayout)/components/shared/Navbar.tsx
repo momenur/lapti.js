@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Logo from "../Logo";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-cyan-50 font-semibold">
+    <nav className="navbar bg-sky-600 text-white font-semibold px-6">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +47,7 @@ const Navbar = () => {
           </ul>
         </div>
         <Link href="/" className="text-3xl font-bold text-cyan-500">
-          Lapti.js
+          <Logo height={60} width={60} text="text-3xl" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -72,7 +73,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <Link href="/">Dashboard</Link>
       </div>
     </nav>
   );
