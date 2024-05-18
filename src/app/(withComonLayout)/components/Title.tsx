@@ -7,7 +7,7 @@ type TTitleProps = {
 const Title = ({ title, subTitle, position }: TTitleProps) => {
   return (
     <div
-      className={`py-20 flex flex-col gap-2  ${
+      className={`flex flex-col gap-2  ${
         position === undefined
           ? "items-center"
           : position

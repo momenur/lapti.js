@@ -2,7 +2,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { useCallback } from "react";
-import { FaDiagramNext } from "react-icons/fa6";
+import { FaArrowRight, FaDiagramNext } from "react-icons/fa6";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import Image from "next/image";
 
@@ -26,9 +26,9 @@ const Banner = () => {
   }, [emblaApi]);
 
   const bannerImages = [
+    { id: 3, img: laptop3, name: "Asus Trough 2022" },
     { id: 1, img: laptop1, name: "Mac book pro 2023" },
     { id: 2, img: laptop2, name: "Asus Zenbook 2024" },
-    { id: 3, img: laptop3, name: "Asus Trough 2022" },
     { id: 4, img: laptop4, name: "Samsung pro 2023" },
   ];
 
@@ -48,11 +48,12 @@ const Banner = () => {
           your computing experience!
         </p>
         <div className="flex justify-center mt-8">
-          <button className="btn bg-sky-500 text-white hover:bg-sky-600 transition-all">
-            All Products
+          <button className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all">
+            All Products <FaArrowRight />
           </button>
         </div>
       </div>
+
       <div className=" flex justify-center items-center max-w-[800px] gap-8 ">
         <button
           className="embla__prev  text-2xl text-sky-500 hover:text-sky-600 transition-all"
@@ -64,13 +65,13 @@ const Banner = () => {
           className="embla__viewport border w-full mx-auto rounded-md"
           ref={emblaRef}
         >
-          <div className="embla__container h-full">
+          <div className="embla__container h-full ">
             {bannerImages.map((image) => (
               <div key={image.id} className="embla__slide">
                 <Image
-                  className="embla__slide"
+                  className="embla__slide "
                   src={image.img}
-                  height={800}
+                  height={0}
                   width={800}
                   alt="next img"
                 />

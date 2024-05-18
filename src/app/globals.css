@@ -4,6 +4,7 @@
 
 .embla__viewport {
   overflow: hidden;
+  z-index: -10;
 }
 .embla__container {
   display: flex;

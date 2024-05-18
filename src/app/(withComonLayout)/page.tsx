@@ -1,13 +1,15 @@
 import Banner from "./components/HomePageComponents/Banner";
 import FlashSaleHome from "./components/HomePageComponents/FlashSaleHome";
+import PopularProducts from "./components/HomePageComponents/PopularProducts";
 import TopBrands from "./components/HomePageComponents/TopBrands";
 
 const page = () => {
   return (
-    <div>
+    <div className="">
       <Banner />
       <FlashSaleHome />
       <TopBrands />
+      <PopularProducts />
     </div>
   );
 };
