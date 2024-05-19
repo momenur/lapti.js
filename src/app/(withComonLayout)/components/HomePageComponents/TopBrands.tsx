@@ -15,22 +15,24 @@ const TopBrands = () => {
       />
 
       <div className="flex justify-between bg-gray-100 py-10  rounded-md px-10">
-        <Image alt="Brands Image" height={700} width={400} src={leftImage} />
+        <Image alt="Brands Image" height={0} width={380} src={leftImage} />
         <div className="flex flex-col justify-between">
           <Image
             alt="Brands Image"
-            height={800}
-            width={550}
+            height={0}
+            width={420}
             src={middleImage1}
+            className="shadow-sky-500 shadow-lg"
           />
           <Image
             alt="Brands Image"
-            height={800}
-            width={550}
+            height={0}
+            width={420}
             src={middleImage2}
+            className="shadow-sky-500 shadow-lg"
           />
         </div>
-        <Image alt="Brands Image" height={400} width={400} src={rightImage} />
+        <Image alt="Brands Image" height={0} width={380} src={rightImage} />
       </div>
       <div className="flex justify-center pt-16">
         <button className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all">

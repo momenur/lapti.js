@@ -1,9 +1,14 @@
 import Image from "next/image";
 import image from "@/assets/laptop3.jpg";
 import { FaDotCircle, FaStar } from "react-icons/fa";
+import Title from "../../components/Title";
 const page = () => {
   return (
     <div className="mt-10 min-h-screen">
+      <Title
+        title="Product Details"
+        subTitle="Product Highlights: Featuring Top Brands - Samsung, ASUS, Acer, HP, Lenovo, and Apple. Discover Performance, Style, and Innovation with Every Laptop"
+      />
       <div className="flex gap-8 pb-8">
         <div className="flex gap-6 pb-8 max-w-full">
           <div className="flex flex-col gap-4 justify-between">
@@ -12,7 +17,13 @@ const page = () => {
             <Image src={image} height={0} width={220} alt="Img" />
           </div>
           <div>
-            <Image src={image} height={0} width={800} alt="Img" />
+            <Image
+              src={image}
+              height={0}
+              width={800}
+              alt="Img"
+              className="shadow-gray-700 shadow-xl"
+            />
           </div>
         </div>
         <div className="w-full">
@@ -60,7 +71,7 @@ const page = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 p-10">
+      <div className="bg-gray-100 p-10 shadow-sky-200 shadow-lg">
         <h1 className="text-sky-500 font-bold text-3xl text-opacity-70 pb-8">
           Products Descriptions
         </h1>
