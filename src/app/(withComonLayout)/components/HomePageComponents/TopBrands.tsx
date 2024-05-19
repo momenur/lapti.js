@@ -8,9 +8,9 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const TopBrands = () => {
   return (
-    <div className="mb-10 ">
+    <div className="mb-10 mt-32 ">
       <Title
-        title="Top Categories"
+        title="Our Top Brands"
         subTitle=" Explore the Best in Technology! Discover Premium Quality, Performance, and Innovation from Leading Brands. Upgrade Your Gear with the Latest Models from Trusted Names in the Industry!"
       />
 

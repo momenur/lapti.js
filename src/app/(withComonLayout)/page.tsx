@@ -3,7 +3,7 @@ import FlashSaleHome from "./components/HomePageComponents/FlashSaleHome";
 import PopularProducts from "./components/HomePageComponents/PopularProducts";
 import TopBrands from "./components/HomePageComponents/TopBrands";
 
-const page = () => {
+const homePage = () => {
   return (
     <div className="">
       <Banner />
@@ -14,4 +14,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default homePage;

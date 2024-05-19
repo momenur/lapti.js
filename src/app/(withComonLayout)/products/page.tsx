@@ -3,7 +3,7 @@ import Sidebar from "./ProductsComponents/Sidebar";
 import ProductsCollection from "./ProductsComponents/ProductsCollection";
 import Card from "../components/Card";
 
-const page = () => {
+const productsPage = () => {
   return (
     <div className="flex gap-4">
       <Sidebar />
@@ -12,4 +12,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default productsPage;

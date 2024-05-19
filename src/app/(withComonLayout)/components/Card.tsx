@@ -1,7 +1,6 @@
 import Image from "next/image";
 import cardImg from "@/assets/laptop2.jpg";
-import { FaAd, FaPlusCircle } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 
 type TCardProps = {
   background: boolean;
@@ -33,14 +32,14 @@ const Card = ({ background }: TCardProps) => {
           <h1 className="text-xl text-sky-500 text-opacity-70 pt-4">
             Double Bed & Side Tables
           </h1>
-          <div className="flex justify-between pt-1 pb-4">
+          <div className="flex justify-between  items-center pt-1 pb-4">
             <div className="flex gap-2">
               <p className="line-through">Price</p>
               <p>Price</p>
             </div>
-            <span>
-              <FaPlusCircle />
-            </span>
+            <button className=" rounded-full px-2 py-1 bg-gray-700 text-white">
+              <FaArrowRight />
+            </button>
           </div>
         </div>
       </div>

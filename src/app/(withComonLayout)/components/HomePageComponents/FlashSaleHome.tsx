@@ -5,7 +5,7 @@ import Title from "../Title";
 const FlashSaleHome = () => {
   return (
     <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center mt-20">
         <Title
           title="flash sale"
           subTitle="Unbeatable Laptop Deals! Limited Time Only – Save Big on Top Brands and Models. Don't Miss Out on Incredible Discounts. Shop Now and Upgrade Your Tech Today!"
