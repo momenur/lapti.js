@@ -1,8 +1,10 @@
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "../Card";
 import Title from "../Title";
+import Link from "next/link";
+import { TProduct } from "@/lib/products";
 
-const PopularProducts = ({ laptops }) => {
+const PopularProducts = ({ laptops }: { laptops: TProduct[] }) => {
   return (
     <div>
       <div className="flex justify-between items-center mt-32">
@@ -12,9 +14,12 @@ const PopularProducts = ({ laptops }) => {
           position={true}
         />
 
-        <button className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all">
+        <Link
+          href="/products"
+          className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all"
+        >
           View All <FaArrowRight />
-        </button>
+        </Link>
       </div>
 
       <div className=" mb-10 grid grid-cols-4 gap-4 ">

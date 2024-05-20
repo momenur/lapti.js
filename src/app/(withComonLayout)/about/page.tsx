@@ -1,10 +1,16 @@
 import React from "react";
+import Title from "../components/Title";
 
 const page = () => {
   return (
-    <div>
-      <main className="p-8">
-        <section className="mb-8">
+    <div className="pt-20">
+      <main className="p-8 text-justify">
+        <Title
+          title="let's Know About Us"
+          subTitle="Learn about our passion for innovation, our commitment to quality, and the milestones that have shaped us. Join us as we continue to push the boundaries of what's possible in the tech world."
+          position={false}
+        />
+        <section className="mb-8 ">
           <h2 className="text-2xl font-semibold text-sky-500">
             Welcome to Lapti.js – Your Premier Destination for Laptops
           </h2>

@@ -54,6 +54,7 @@ const Card = ({ background, laptop }: TCardProps) => {
               <p className="line-through">${laptop.regularPrice}</p>
               <p>${laptop.discountPrice}</p>
             </div>
+            <h1>Check</h1>
             <Link href={`products/${laptop._id}`}>
               <span className="text-xl">
                 <FaArrowRight />

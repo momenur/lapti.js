@@ -5,6 +5,7 @@ import middleImage1 from "@/assets/brands/middle1.jpg";
 import middleImage2 from "@/assets/brands/middle2.jpg";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 const TopBrands = () => {
   return (
@@ -35,9 +36,12 @@ const TopBrands = () => {
         <Image alt="Brands Image" height={0} width={380} src={rightImage} />
       </div>
       <div className="flex justify-center pt-16">
-        <button className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all">
+        <Link
+          href="/brands"
+          className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all"
+        >
           View All <FaArrowRight />
-        </button>
+        </Link>
       </div>
     </div>
   );

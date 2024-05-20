@@ -6,9 +6,9 @@ const ProductsCollection = async () => {
   const res = await fetch("http://localhost:5000/api/v1/laptops");
   const laptops: TProduct[] = await res.json();
   return (
-    <div className="pt-10 w-full ms-60 -z-10 ">
+    <div className="pt-10 w-full ms-60">
       <Title
-        title="Our Collection Of Productsrrrr"
+        title="Our Collection Of Products"
         subTitle="Experience lightning-fast performance with our sleek, lightweight laptop—ideal for work, gaming, and everything in between."
         position={true}
       />

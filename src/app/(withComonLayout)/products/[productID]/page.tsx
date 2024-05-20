@@ -2,7 +2,17 @@ import Image from "next/image";
 import image from "@/assets/laptop3.jpg";
 import { FaDotCircle, FaStar } from "react-icons/fa";
 import Title from "../../components/Title";
-const page = () => {
+import { TProduct } from "@/lib/products";
+
+type TParams = {
+  productID: string;
+};
+
+const page = async ({ params }: { params: TParams }) => {
+  const url = `http://localhost:5000/api/v1/laptops/${params.productID}`;
+  const res = await fetch(url);
+  const laptop: TProduct = await res.json();
+
   return (
     <div className="mt-10 min-h-screen">
       <Title
@@ -18,7 +28,7 @@ const page = () => {
           </div>
           <div>
             <Image
-              src={image}
+              src={laptop.productImage}
               height={0}
               width={800}
               alt="Img"
@@ -27,9 +37,9 @@ const page = () => {
           </div>
         </div>
         <div className="w-full">
-          <h1>Double Bed & Side Tables</h1>
-          <p className="flex gap-2 items-center pb-8">
-            $54.00 |{" "}
+          <h1 className="text-xl font-semibold">{laptop.productName}</h1>
+          <p className="flex gap-2 items-center pb-8 py-1 text-md font-semibold">
+            ${laptop.discountPrice} |{" "}
             <span className="flex text-sky-500 gap-1">
               <FaStar />
               <FaStar />
@@ -40,12 +50,12 @@ const page = () => {
           </p>
 
           <p className="border-t pt-2 text-justify font-light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quis
-            sunt id quidem suscipit corrupti assumenda cum perspiciatis expedita
-            eveniet recusandae sint debitis dignissimos maxime qui sit ipsam?
-            Dolor temporibus perferendis, neque dolorem repellendus quae
-            recusandae et inventore vitae ipsa a suscipit aut, est possimus
-            perspiciatis nobis rerum quibusdam similique!
+            <span className="block text-lg text-sky-500 font-medium">
+              Specification:
+            </span>
+            <span className="text-gray-500  font-semibold">
+              {laptop.specification}
+            </span>
           </p>
 
           <div className="mt-10 border-t">
@@ -53,19 +63,19 @@ const page = () => {
               <span className="text-xs">
                 <FaDotCircle />
               </span>
-              Lorem ipsum dolor sit amet.
+              Performance Base laptop.
             </p>
             <p className="flex items-center gap-2">
               <span className="text-xs">
                 <FaDotCircle />
               </span>
-              Lorem ipsum dolor sit amet.
+              Best value for Money.
             </p>
             <p className="flex items-center gap-2">
               <span className="text-xs">
                 <FaDotCircle />
               </span>
-              Lorem ipsum dolor sit amet.
+              Trust our Best Service.
             </p>
           </div>
         </div>
@@ -75,17 +85,29 @@ const page = () => {
         <h1 className="text-sky-500 font-bold text-3xl text-opacity-70 pb-8">
           Products Descriptions
         </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, a
-          reiciendis! Doloremque saepe modi rem quo, facere consectetur deserunt
-          commodi perspiciatis alias autem ex nobis ea ipsam neque. Sint unde
-          quam debitis! Accusamus eos quis numquam porro officiis eveniet dolore
-          velit illum dignissimos nesciunt, eum aliquam a omnis ad blanditiis.
-          Saepe minima asperiores ipsa, possimus aliquid nihil soluta quas vel
-          et tempora voluptate aliquam delectus eius odio excepturi numquam a
-          dignissimos fuga quod molestiae, inventore ea facere. Esse sapiente
-          voluptas minus cumque distinctio vero rerum beatae odio impedit illo
-          cum eaque dolor at, ducimus deserunt delectus est dolore ut atque?
+        <p className="text-lg font-light text-gray-500 text-justify">
+          {laptop.productDescription},Product Highlights: Featuring Top Brands -
+          Samsung, ASUS, Acer, HP, Lenovo, and Apple. Discover Performance,
+          Style, and Innovation with Every Laptop.Product Highlights: Featuring
+          Top Brands - Samsung, ASUS, Acer, HP, Lenovo, and Apple. Discover
+          Performance, Style,
+          <br /> <br />
+          and Innovation with Every Laptop.Product Highlights: Featuring Top
+          Brands - Samsung, ASUS, Acer, HP, Lenovo, and Apple. Discover
+          Performance, Style, and Innovation with Every Laptop. Product
+          Highlights: <br />
+          <br />
+          Featuring Top Brands - Samsung, ASUS, Acer, HP, Lenovo, and Apple.
+          Discover Performance, Style, and Innovation with Every Laptop.Product
+          Highlights: Featuring Top Brands - Samsung, ASUS, Acer, HP, Lenovo,
+          and Apple. Discover Performance, Style, and Innovation with Every
+          Laptop.Product Highlights: Featuring Top Brands - Samsung, ASUS, Acer,
+          HP, Lenovo, and Apple. Discover Performance, Style, and Innovation
+          with Every Laptop.
+          <br />
+          <br />
+          <span className="font-semibold"> Specification: </span>{" "}
+          {laptop.specification}
         </p>
       </div>
     </div>

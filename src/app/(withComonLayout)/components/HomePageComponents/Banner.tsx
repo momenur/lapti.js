@@ -11,6 +11,7 @@ import laptop2 from "@/assets/laptop2.jpg";
 import laptop3 from "@/assets/laptop3.jpg";
 import laptop4 from "@/assets/laptop4.jpg";
 import Logo from "../Logo";
+import Link from "next/link";
 
 const Banner = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
@@ -48,9 +49,12 @@ const Banner = () => {
           your computing experience!
         </p>
         <div className="flex justify-center mt-8">
-          <button className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all">
+          <Link
+            href="/products"
+            className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all"
+          >
             All Products <FaArrowRight />
-          </button>
+          </Link>
         </div>
       </div>
 

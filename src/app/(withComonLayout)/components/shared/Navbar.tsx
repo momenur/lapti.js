@@ -3,7 +3,7 @@ import Logo from "../Logo";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-sky-600 text-white font-semibold px-6 sticky z-999 top-0 ">
+    <nav className="navbar bg-sky-600 text-white font-semibold px-6 sticky z-[999] top-0 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

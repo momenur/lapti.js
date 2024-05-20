@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Title from "../components/Title";
-import { productsData } from "@/lib/products";
 
 type Product = {
   productName: string;
@@ -21,11 +20,14 @@ type BrandImage = {
   image: string;
 };
 
-const page = () => {
+const page = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptops");
+  const productsData = await res.json();
+
   function getUniqueBrandImages(products: Product[]): BrandImage[] {
     const brandMap: { [key: string]: string } = {};
 
-    products.forEach((product) => {
+    products?.forEach((product) => {
       if (!brandMap[product.brandName]) {
         brandMap[product.brandName] = product.brandImage;
       }
@@ -37,7 +39,6 @@ const page = () => {
     }));
   }
 
-  // Usage
   const uniqueBrandImages = getUniqueBrandImages(productsData);
   // console.log(uniqueBrandImages);
 

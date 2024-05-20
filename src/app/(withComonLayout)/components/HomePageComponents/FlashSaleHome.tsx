@@ -2,8 +2,9 @@ import { FaArrowRight } from "react-icons/fa6";
 import Card from "../Card";
 import Title from "../Title";
 import { TProduct } from "@/lib/products";
+import Link from "next/link";
 
-const FlashSaleHome = ({ flashSale }: TProduct[]) => {
+const FlashSaleHome = ({ flashSale }: { flashSale: TProduct[] }) => {
   return (
     <div>
       <div className="flex justify-between items-center mt-20">
@@ -13,9 +14,12 @@ const FlashSaleHome = ({ flashSale }: TProduct[]) => {
           position={true}
         />
 
-        <button className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all">
+        <Link
+          href="/flash-sale"
+          className="btn rounded-full px-6 bg-sky-500 text-white hover:bg-sky-600 transition-all"
+        >
           View All <FaArrowRight />
-        </button>
+        </Link>
       </div>
 
       <div className=" mb-10 grid grid-cols-4 gap-4">
