@@ -1,8 +1,9 @@
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "../Card";
 import Title from "../Title";
+import { TProduct } from "@/lib/products";
 
-const FlashSaleHome = () => {
+const FlashSaleHome = ({ flashSale }: TProduct[]) => {
   return (
     <div>
       <div className="flex justify-between items-center mt-20">
@@ -18,10 +19,9 @@ const FlashSaleHome = () => {
       </div>
 
       <div className=" mb-10 grid grid-cols-4 gap-4">
-        <Card background={false} />
-        <Card background={false} />
-        <Card background={false} />
-        <Card background={false} />
+        {flashSale.slice(0, 4).map((item) => (
+          <Card key={item._id} laptop={item} background={false} />
+        ))}
       </div>
     </div>
   );

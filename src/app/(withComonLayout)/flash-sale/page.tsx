@@ -1,7 +1,11 @@
+import { TProduct } from "@/lib/products";
 import Card from "../components/Card";
 import Title from "../components/Title";
 
-const page = () => {
+const page = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptops");
+  const laptops: TProduct[] = await res.json();
+  const flashSale = laptops.filter((item) => item.category === "flash sale");
   return (
     <div className="my-10">
       <Title
@@ -11,18 +15,9 @@ const page = () => {
       />
 
       <div className="grid grid-cols-4 gap-10">
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
+        {flashSale.map((laptop) => (
+          <Card key={laptop._id} laptop={laptop} background={true} />
+        ))}
       </div>
     </div>
   );

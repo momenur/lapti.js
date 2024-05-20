@@ -2,7 +2,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import Card from "../Card";
 import Title from "../Title";
 
-const PopularProducts = () => {
+const PopularProducts = ({ laptops }) => {
   return (
     <div>
       <div className="flex justify-between items-center mt-32">
@@ -18,14 +18,9 @@ const PopularProducts = () => {
       </div>
 
       <div className=" mb-10 grid grid-cols-4 gap-4 ">
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
-        <Card background={true} />
+        {laptops.slice(0, 8).map((laptop) => (
+          <Card background={true} key={laptop._id} laptop={laptop} />
+        ))}
       </div>
     </div>
   );
