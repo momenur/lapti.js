@@ -24,7 +24,7 @@ const Title = ({ title, subTitle, position }: TTitleProps) => {
           {title}
         </h1>
         <p
-          className={`text-gray-500 text-opacity-80 font-light  ${
+          className={`text-gray-500 hidden md:block text-opacity-80 font-light  ${
             position === undefined ? "text-center" : "text-justify"
           }`}
         >

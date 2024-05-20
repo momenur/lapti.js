@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import Hero from "../components/Hero";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -38,15 +39,19 @@ const ContactPage = () => {
 
   return (
     <div>
-      <main className="p-8">
-        <section className="max-w-2xl mx-auto bg-white p-8 rounded shadow">
+      <Hero
+        title="Get in Touch"
+        description="Need assistance? Our support team is here to help with product inquiries, technical support, sales information, and general questions. Reach out via email at support@lapti.com or call us at +88 01755772447. We're available Monday to Friday, 9:00 AM - 6:00 PM."
+      />
+      <main className="p-8 pt-20">
+        <section className="max-w-4xl mx-auto bg-white p-8 rounded shadow-sky-300 shadow-lg">
           <h2 className="text-2xl font-semibold text-sky-500 mb-4">
             Get in Touch
           </h2>
           {successMessage && (
             <p className="text-green-500 mb-4">{successMessage}</p>
           )}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="w-full">
             <div className="mb-4">
               <label
                 htmlFor="name"

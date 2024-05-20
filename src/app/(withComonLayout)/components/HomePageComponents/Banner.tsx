@@ -34,7 +34,7 @@ const Banner = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center h-screen max-h-[700px] ">
+    <div className="md:flex justify-between items-center h-screen max-h-[700px] ">
       <div className="px-10 ">
         <Logo height={100} width={100} text="text-5xl" />
         <h1 className="text-2xl text-gray-500 font-light pt-4 pb-2">

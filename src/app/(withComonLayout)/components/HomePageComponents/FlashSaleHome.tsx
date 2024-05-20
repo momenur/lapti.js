@@ -22,7 +22,7 @@ const FlashSaleHome = ({ flashSale }: { flashSale: TProduct[] }) => {
         </Link>
       </div>
 
-      <div className=" mb-10 grid grid-cols-4 gap-4">
+      <div className=" mb-10 grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 gap-4 justify-items-center">
         {flashSale.slice(0, 4).map((item) => (
           <Card key={item._id} laptop={item} background={false} />
         ))}

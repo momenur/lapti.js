@@ -14,7 +14,7 @@ const page = async () => {
         position={true}
       />
 
-      <div className="grid grid-cols-4 gap-10">
+      <div className="grid md:grid-cols-3 grid-cols-1 justify-items-center lg:grid-cols-4 gap-10">
         {flashSale.map((laptop) => (
           <Card key={laptop._id} laptop={laptop} background={true} />
         ))}

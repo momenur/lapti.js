@@ -15,7 +15,7 @@ const TopBrands = () => {
         subTitle=" Explore the Best in Technology! Discover Premium Quality, Performance, and Innovation from Leading Brands. Upgrade Your Gear with the Latest Models from Trusted Names in the Industry!"
       />
 
-      <div className="flex justify-between bg-gray-100 py-10  rounded-md px-10">
+      <div className="md:flex justify-between bg-gray-100 py-10  rounded-md px-10">
         <Image alt="Brands Image" height={0} width={380} src={leftImage} />
         <div className="flex flex-col justify-between">
           <Image

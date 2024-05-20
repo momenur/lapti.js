@@ -22,7 +22,7 @@ const PopularProducts = ({ laptops }: { laptops: TProduct[] }) => {
         </Link>
       </div>
 
-      <div className=" mb-10 grid grid-cols-4 gap-4 ">
+      <div className=" mb-10 grid md:grid-cols-3 grid-cols-1 lg:grid-cols-4 gap-4 justify-items-center ">
         {laptops.slice(0, 8).map((laptop) => (
           <Card background={true} key={laptop._id} laptop={laptop} />
         ))}
