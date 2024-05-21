@@ -1,10 +1,15 @@
 import React from "react";
 import Title from "../components/Title";
+import Hero from "../components/Hero";
 
 const page = () => {
   return (
-    <div className="pt-20">
-      <main className="p-8 text-justify">
+    <div className="">
+      <Hero
+        title="About Us"
+        description="Need assistance? Our support team is here to help with product inquiries, technical support, sales information, and general questions. Reach out via email at support@lapti.com or call us at +88 01755772447. We're available Monday to Friday, 9:00 AM - 6:00 PM."
+      />
+      <main className="p-8 pt-10 text-justify">
         <Title
           title="let's Know About Us"
           subTitle="Learn about our passion for innovation, our commitment to quality, and the milestones that have shaped us. Join us as we continue to push the boundaries of what's possible in the tech world."

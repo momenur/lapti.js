@@ -9,7 +9,7 @@ type THeroProps = {
 const Hero = ({ title, description }: THeroProps) => {
   return (
     <div
-      className="hero max-h-[500px] max-w-full"
+      className="hero min-h-[500px] max-h-[600px] max-w-full"
       style={{
         backgroundImage: "url(https://i.ibb.co/rZQNP7b/asus1.jpg)",
       }}

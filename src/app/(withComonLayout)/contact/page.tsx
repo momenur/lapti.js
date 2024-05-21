@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import Hero from "../components/Hero";
+import Title from "../components/Title";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +44,12 @@ const ContactPage = () => {
         title="Get in Touch"
         description="Need assistance? Our support team is here to help with product inquiries, technical support, sales information, and general questions. Reach out via email at support@lapti.com or call us at +88 01755772447. We're available Monday to Friday, 9:00 AM - 6:00 PM."
       />
-      <main className="p-8 pt-20">
+      <main className="p-4 md:p-0 md:py-16">
+        <Title
+          title="Contact us"
+          subTitle="let's know about us. If have you any query or advice give a massage and also feedback"
+          position={true}
+        />
         <section className="max-w-4xl mx-auto bg-white p-8 rounded shadow-sky-300 shadow-lg">
           <h2 className="text-2xl font-semibold text-sky-500 mb-4">
             Get in Touch

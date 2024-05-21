@@ -73,7 +73,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link href="/">Dashboard</Link>
+        <Link href="/dashboard/all-products">Dashboard</Link>
       </div>
     </nav>
   );

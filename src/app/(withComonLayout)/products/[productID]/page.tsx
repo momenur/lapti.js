@@ -19,9 +19,9 @@ const page = async ({ params }: { params: TParams }) => {
         title="Product Details"
         subTitle="Product Highlights: Featuring Top Brands - Samsung, ASUS, Acer, HP, Lenovo, and Apple. Discover Performance, Style, and Innovation with Every Laptop"
       />
-      <div className="flex gap-8 pb-8">
-        <div className="flex gap-6 pb-8 max-w-full">
-          <div className="flex flex-col gap-4 justify-between">
+      <div className="md:flex gap-8  pb-8 mx-4 md:mx-0">
+        <div className="md:flex gap-6 pb-8 max-w-full">
+          <div className="md:flex flex-col gap-4 justify-between">
             <Image src={image} height={0} width={220} alt="Img" />
             <Image src={image} height={0} width={220} alt="Img" />
             <Image src={image} height={0} width={220} alt="Img" />
