@@ -5,6 +5,7 @@ import React from "react";
 const page = async () => {
   const res = await fetch("http://localhost:5000/api/v1/laptops");
   const laptops: TProduct[] = await res.json();
+
   return (
     <div className=" w-full  mt-4">
       <div className="flex justify-between px-2 gap-2 py-8 bg-gray-400 rounded-t-lg">

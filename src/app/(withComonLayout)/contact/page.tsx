@@ -25,12 +25,11 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    //form submission
-    console.log("Form data submitted:", formData);
+
     setSuccessMessage(
       "Thank you for your message! We will get back to you soon."
     );
-    // Reset form
+
     setFormData({
       name: "",
       email: "",

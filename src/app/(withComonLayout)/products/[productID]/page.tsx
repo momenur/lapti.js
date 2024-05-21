@@ -8,9 +8,19 @@ type TParams = {
   productID: string;
 };
 
+export const generateStaticParams = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptops");
+  const laptops: TProduct[] = await res.json();
+  return laptops.slice(0, 10).map((laptop: TProduct) => ({
+    productID: laptop._id,
+  }));
+};
+
 const page = async ({ params }: { params: TParams }) => {
   const url = `http://localhost:5000/api/v1/laptops/${params.productID}`;
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    cache: "no-store",
+  });
   const laptop: TProduct = await res.json();
 
   return (

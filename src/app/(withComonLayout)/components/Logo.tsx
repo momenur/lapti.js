@@ -8,7 +8,6 @@ type TLogoProps = {
 };
 
 const Logo = ({ height, width, text }: TLogoProps) => {
-  console.log(text);
   return (
     <div className="flex items-center gap-4">
       <Image src={logo} width={width} height={height} alt="Next image" />

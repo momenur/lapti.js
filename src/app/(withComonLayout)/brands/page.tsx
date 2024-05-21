@@ -42,7 +42,6 @@ const brandPage = async () => {
   }
 
   const uniqueBrandImages = getUniqueBrandImages(productsData);
-  // console.log(uniqueBrandImages);
 
   return (
     <div className="py-20">
@@ -53,7 +52,7 @@ const brandPage = async () => {
       />
       <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-10 bg-slate-200 rounded-md justify-items-center md:py-20 py-10 lg:py-32">
         {uniqueBrandImages.map((brand) => (
-          <Link key={Math.random()} href="/products">
+          <Link key={Math.random()} href={`products?brands=${brand.name}`}>
             <div
               key={brand.name}
               className="bg-white p-6 rounded-lg shadow-xl shadow-sky-300"

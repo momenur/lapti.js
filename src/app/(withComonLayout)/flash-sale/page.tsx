@@ -2,10 +2,15 @@ import { TProduct } from "@/lib/products";
 import Card from "../components/Card";
 import Title from "../components/Title";
 
-const page = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptops");
+const FlashSalePage = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptops", {
+    next: {
+      revalidate: 30,
+    },
+  });
   const laptops: TProduct[] = await res.json();
   const flashSale = laptops.filter((item) => item.category === "flash sale");
+
   return (
     <div className="my-10">
       <Title
@@ -23,4 +28,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default FlashSalePage;

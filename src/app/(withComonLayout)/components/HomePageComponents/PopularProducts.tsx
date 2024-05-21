@@ -4,7 +4,13 @@ import Title from "../Title";
 import Link from "next/link";
 import { TProduct } from "@/lib/products";
 
-const PopularProducts = ({ laptops }: { laptops: TProduct[] }) => {
+const PopularProducts = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptops", {
+    next: {
+      revalidate: 30,
+    },
+  });
+  const laptops: TProduct[] = await res.json();
   return (
     <div>
       <div className="flex justify-between items-center mt-32">

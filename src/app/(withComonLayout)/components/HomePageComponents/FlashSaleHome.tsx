@@ -4,7 +4,16 @@ import Title from "../Title";
 import { TProduct } from "@/lib/products";
 import Link from "next/link";
 
-const FlashSaleHome = ({ flashSale }: { flashSale: TProduct[] }) => {
+const FlashSaleHome = async () => {
+  const res = await fetch("http://localhost:5000/api/v1/laptops", {
+    next: {
+      revalidate: 30,
+    },
+  });
+  const laptops: TProduct[] = await res.json();
+  const flashSale: TProduct[] = laptops.filter(
+    (item) => item.category === "flash sale"
+  );
   return (
     <div>
       <div className="flex justify-between items-center mt-20">

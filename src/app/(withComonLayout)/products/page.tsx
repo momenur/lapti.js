@@ -1,7 +1,6 @@
 import React from "react";
 import Sidebar from "./ProductsComponents/Sidebar";
 import ProductsCollection from "./ProductsComponents/ProductsCollection";
-import Card from "../components/Card";
 
 const productsPage = () => {
   return (

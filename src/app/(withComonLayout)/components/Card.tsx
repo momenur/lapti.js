@@ -28,7 +28,9 @@ const Card = ({ background, laptop }: TCardProps) => {
     <div>
       <div
         className={`relative max-w-[350px] text-sky-500 rounded-md ${
-          background ? "bg-gray-100" : "bg-gray-700"
+          background
+            ? "bg-gray-100"
+            : "bg-white border-sky-500 border shadow-sky-500 shadow-lg"
         }`}
       >
         <Image
@@ -39,22 +41,26 @@ const Card = ({ background, laptop }: TCardProps) => {
           alt="next image"
         />
         <p
-          className={`absolute top-2 left-2 text-xs  font-light  px-4 py-1 rounded-full ${
-            background ? "bg-gray-100" : "bg-gray-700"
+          className={`absolute top-2 text-black font-semibold left-2 text-xs    px-4 py-1 rounded-full ${
+            background ? "bg-gray-100" : "bg-white"
           }`}
         >
           -{laptop.discountPercentage}%
         </p>
         <div className="px-4">
-          <h1 className="text-xl text-sky-500 text-opacity-70 pt-4">
+          <h1 className="text-xl text-black text-opacity-70 pt-4">
             {laptop.productName}
+          </h1>
+          <h1>
+            <span className="pe-1">Category: </span>
+            <span className="text-black font-semibold">{laptop.category}</span>
           </h1>
           <div className="flex justify-between  items-center pt-1 pb-4">
             <div className="flex gap-2">
               <p className="line-through">${laptop.regularPrice}</p>
               <p>${laptop.discountPrice}</p>
             </div>
-            <h1>Check</h1>
+
             <Link href={`products/${laptop._id}`}>
               <span className="text-xl">
                 <FaArrowRight />
