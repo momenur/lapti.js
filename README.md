@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Lapti.js
 
-## Getting Started
+This is a Laptop Online Shop. User can visit home page, Brands page, Products, Flash Sale, About Us, Contact Us and also dashboard.
 
-First, run the development server:
+- Home-Page: has multiple section including BANNER, Flash Sale, Brands, Most Popular Laptop and also a Footer.
+- Brand Page : Brand Page Has 6 Brand. Apple, Samsung, Asus, Hp, Acer, Lenovo etc. When user click any brand redirect to product page and show brand wise laptop.
+- Products: Products page has a sidebar and also a container. user can filter using this sidebar.
+- Flash Sale Page: Flash sale page show only Flash sale Products. and it has end timer. when time is end the flash sale page is disabled .
+- About us page: About Us Page has Shop all info and our success History and also this page contained or straggle history.
+- Contact Page: This website also has a Contact Page. User Send her Complain and also feedback.
+- Dashboard-Page: Dash Board has a Sidebar and a container. Sidebar contain multiple page including all-Products and container show our Products.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Technology Stack:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js(SSR, SSG, ISR)
+- TypeScript
+- Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## **Live Links:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Client-Site: https://663faf17bcb7ce1c9d800c0d--stellar-granita-1ec32b.netlify.app
+- Server-Site: https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app
 
-## Learn More
+## Installation:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the Project Locally using `npm run dev`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js + TypeScript + Tailwind CSS
+- React-icons
+- embla
+- swiper
