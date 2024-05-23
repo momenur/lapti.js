@@ -61,7 +61,7 @@ const Card = ({ background, laptop }: TCardProps) => {
               <p>${laptop.discountPrice}</p>
             </div>
 
-            <Link href={`products/${laptop._id}`}>
+            <Link href={`laptop/${laptop._id}`}>
               <span className="text-xl">
                 <FaArrowRight />
               </span>

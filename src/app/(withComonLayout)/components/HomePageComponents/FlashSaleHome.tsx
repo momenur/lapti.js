@@ -1,15 +1,19 @@
 import { FaArrowRight } from "react-icons/fa6";
 import Card from "../Card";
 import Title from "../Title";
-import { TProduct } from "@/lib/products";
 import Link from "next/link";
+import { TProduct } from "@/lib/type";
 
 const FlashSaleHome = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptops", {
-    next: {
-      revalidate: 30,
-    },
-  });
+  const res = await fetch(
+    "https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app/api/v1/laptops",
+    {
+      cache: "force-cache",
+      // next: {
+      //   revalidate: 30,
+      // },
+    }
+  );
   const laptops: TProduct[] = await res.json();
   const flashSale: TProduct[] = laptops.filter(
     (item) => item.category === "flash sale"

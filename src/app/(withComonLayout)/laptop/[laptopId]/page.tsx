@@ -2,22 +2,24 @@ import Image from "next/image";
 import image from "@/assets/laptop3.jpg";
 import { FaDotCircle, FaStar } from "react-icons/fa";
 import Title from "../../components/Title";
-import { TProduct } from "@/lib/products";
+import { TProduct } from "@/lib/type";
 
 type TParams = {
-  productID: string;
+  laptopId: string;
 };
 
 export const generateStaticParams = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptops");
+  const res = await fetch(
+    "https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app/api/v1/laptops"
+  );
   const laptops: TProduct[] = await res.json();
   return laptops.slice(0, 10).map((laptop: TProduct) => ({
-    productID: laptop._id,
+    laptopId: laptop._id,
   }));
 };
 
 const page = async ({ params }: { params: TParams }) => {
-  const url = `http://localhost:5000/api/v1/laptops/${params.productID}`;
+  const url = `https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app/api/v1/laptops/${params.laptopId}`;
   const res = await fetch(url, {
     cache: "no-store",
   });

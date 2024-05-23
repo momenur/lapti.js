@@ -1,4 +1,4 @@
-import { TProduct } from "@/lib/products";
+import { TProduct } from "@/lib/type";
 import Image from "next/image";
 import React from "react";
 
