@@ -3,7 +3,9 @@ export const getBrandProducts = async (
   minPrice?: string,
   maxPrice?: string
 ) => {
-  const url = new URL("http://localhost:5000/api/v1/brand");
+  const url = new URL(
+    "https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app/api/v1/brand"
+  );
 
   // Append query parameters
   url.searchParams.append("brand", brand);

@@ -1,6 +1,9 @@
 export const getAllLaptops = async () => {
-  const res = await fetch("http://localhost:5000/api/v1/laptops", {
-    cache: "force-cache",
-  });
+  const res = await fetch(
+    "https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app/api/v1/laptops",
+    {
+      cache: "no-store",
+    }
+  );
   return res.json();
 };

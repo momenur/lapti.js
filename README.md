@@ -18,7 +18,7 @@ This is a Laptop Online Shop. User can visit home page, Brands page, Products, F
 
 ## **Live Links:**
 
-- Client-Site: https://663faf17bcb7ce1c9d800c0d--stellar-granita-1ec32b.netlify.app
+- Client-Site: https://leptop-app.vercel.app
 - Server-Site: https://l2-b2-frontend-path-assignment-6-server-starter-pack-chi.vercel.app
 
 ## Installation:
